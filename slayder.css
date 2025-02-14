@@ -29,10 +29,7 @@ section {
   height: 100%;
 }
 
-body:fullscreen .bi-fullscreen {
-  display: none;
-}
-
-body:not(:fullscreen) .bi-fullscreen-exit {
-  display: none;
+body:fullscreen header,
+body:fullscreen footer {
+  display: none !important;
 }
