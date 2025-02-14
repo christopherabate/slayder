@@ -10,8 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/styles/a11y-dark.min.css" rel="stylesheet">
     <link href="slayder.css" rel="stylesheet">
   </head>
-  <body class="container-fluid">
-    <header role="banner" class="d-flex justify-content-between my-2">
+  <body>
+    <header role="banner" class="d-flex justify-content-between">
       <h1 class="display-6 my-2">Comprendre l’accessibilité numérique et ses enjeux pour le groupe Orange</h1>
       <nav class="btn-group" role="navigation" aria-label="Navigation générale">
         <div id="summary" class="dropdown">
@@ -64,7 +64,7 @@
         </div>
       </nav>
     </header>
-    <main role="main" data-bs-spy="scroll" data-bs-target="#summary" class="my-3">
+    <main role="main" data-bs-spy="scroll" data-bs-target="#summary">
       <section id="intro" tabindex="0" class="d-flex align-items-center">
         <div>
           <img src="orange-logo.svg" width="100" height="100" alt="Orange" loading="lazy" class="mb-3">
@@ -80,7 +80,7 @@
           </h2>
         </div>
       </section>
-      <section id="schedule" tabindex="0">
+      <section id="schedule" tabindex="-1">
         <h1>Objectifs</h1>
         <ol>
           <li>Comprendre le terme <mark>accessibilité</mark></li>
@@ -90,9 +90,9 @@
           <li>Vous donner des <mark>contacts</mark> et des <mark>liens utiles</mark> pour en savoir plus</li>
         </ol>
       </section>
-      <section id="figures" tabindex="0">
+      <section id="figures" tabindex="-1">
         <h1>Quelques chiffres</h1>
-        <div class="container-fluid row">
+        <div class="row g-0">
           <div class="col-6">
             <p>Classe de masquage accessible :</p>
             <pre><code class="language-css">.visually-hidden {
@@ -113,20 +113,20 @@
           </div>
         </div>
       </section>
-      <section id="assistive-technologies" tabindex="0">
+      <section id="assistive-technologies" tabindex="-1">
         <h1>Les aides techniques</h1>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/0ani4NkrRe4?si=WtPvT6e8Q6RF0WXf&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </section>
-      <section id="legals" tabindex="0">
+      <section id="legals" tabindex="-1">
         <h1>Obligations légales</h1>
       </section>
-      <section id="orange-commitments" tabindex="0">
+      <section id="orange-commitments" tabindex="-1">
         <h1>Les engagements Orange</h1>
       </section>
-      <section id="go-further" tabindex="0">
+      <section id="go-further" tabindex="-1">
         <h1>Pour aller plus loin…</h1>
       </section>
-      <section id="conclusion" tabindex="0">
+      <section id="conclusion" tabindex="-1">
         <h1>En conclusion…</h1>
       </section>
       <section id="thanks" tabindex="0" class="d-flex align-items-center">
@@ -144,14 +144,14 @@
       </section>
       -->
       <!-- SLIDE 1 COLONNE
-      <section id="IDENTIFIANT_UNIQUE" tabindex="0">
+      <section id="IDENTIFIANT_UNIQUE" tabindex="-1">
         <h1>TITRE</h1>
       </section>
       -->
       <!-- SLIDE 2 COLONNES
-      <section id="IDENTIFIANT_UNIQUE" tabindex="0">
+      <section id="IDENTIFIANT_UNIQUE" tabindex="-1">
         <h1>TITRE</h1>
-        <div class="container-fluid row">
+        <div class="row g-0">
           <div class="col-6">
           </div>
           <div class="col-6">
@@ -160,7 +160,7 @@
       </section>
       -->
     </main>
-    <footer class="my-2">
+    <footer>
       <nav id="pagination" aria-label="Pagination" class="d-none d-sm-block">
         <ul class="pagination justify-content-center"></ul>
       </nav>
