@@ -7,6 +7,7 @@
     <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
     <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/orange-helvetica.min.css" rel="stylesheet" integrity="sha384-A0Qk1uKfS1i83/YuU13i2nx5pk79PkIfNFOVzTcjCMPGKIDj9Lqx9lJmV7cdBVQZ" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-a11y-dark.css" rel="stylesheet" crossorigin="anonymous">
     <link href="slayder.css" rel="stylesheet">
   </head>
   <body class="container-fluid">
@@ -93,7 +94,19 @@
         <h1>Quelques chiffres</h1>
         <div class="container-fluid row">
           <div class="col">
-            1 of 2
+            <p>Classe de masquage accessible :</p>
+            <pre><code class="language-css">.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0,0,0,0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}</code></pre>
+            <pre><code class="language-html">&lt;h2 class="visually-hidden"&gt;Titre pour les lecteurs d'écrans&lt;/h2&gt;</code></pre>
           </div>
           <div class="col">
             2 of 2
@@ -102,8 +115,9 @@
       </section>
       <section id="assistive-technologies" tabindex="0">
         <h1>Les aides techniques</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0ani4NkrRe4?si=WtPvT6e8Q6RF0WXf&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </section>
-      <section id="legal" tabindex="0">
+      <section id="legals" tabindex="0">
         <h1>Obligations légales</h1>
       </section>
       <section id="orange-commitments" tabindex="0">
@@ -152,6 +166,7 @@
       </nav>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
     <script src="colorModeToggler.js"></script>
     <script src="slayder.js"></script>
   </body>
