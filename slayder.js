@@ -1,8 +1,13 @@
 // Hash
-const observer = new IntersectionObserver(entries => 
-  entries.forEach(entry => entry.isIntersecting && (location.hash = `#${entry.target.id}`)), 
-  { threshold: 0.5 }
-);
+const title = document.title;
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      location.hash = `#${entry.target.id}`;
+      document.title = `${title} - ${entry.target.querySelector('h1')?.innerText || entry.target.id}`;
+    }
+  });
+}, { threshold: 0.5 });
 document.querySelectorAll("section").forEach(section => observer.observe(section));
 
 // Summary
