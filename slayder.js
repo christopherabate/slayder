@@ -11,7 +11,7 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll("section").forEach(section => observer.observe(section));
 
 // Summary
-document.querySelector("#summary ul.dropdown-menu").innerHTML = [...document.querySelectorAll('section h1')].map(heading => `
+document.querySelector("#summary ul").innerHTML = [...document.querySelectorAll('section h1')].map(heading => `
   <li><a class="dropdown-item" href="#${heading.closest('section').id}">${heading.textContent}</a></li>
 `).join('');
 
@@ -21,9 +21,9 @@ document.querySelector("#summary ul.dropdown-menu").innerHTML = [...document.que
     const slides = [...document.querySelectorAll("section")].map(slide => slide.id);
     const currentIndex = slides.indexOf(window.location.hash.split("#").pop());
 
-    document.querySelector("#pagination ul.pagination").innerHTML = `
+    document.querySelector("#pagination ul").innerHTML = `
       <li class="page-item ${currentIndex === 0 ? 'disabled' : ''}">
-        <a ${currentIndex > 0 ? `href="#${slides[currentIndex - 1]}"` : ''} class="page-link" aria-label="Précédente"></a>
+        <a ${currentIndex > 0 ? `href="#${slides[currentIndex - 1]}"` : ''} class="page-link" aria-label="Previous"></a>
       </li>
       ${slides.map((slide, index) => `
         <li class="page-item ${currentIndex === index ? 'active' : ''}" ${currentIndex === index ? 'aria-current="page"' : ''}>
@@ -31,7 +31,7 @@ document.querySelector("#summary ul.dropdown-menu").innerHTML = [...document.que
         </li>
       `).join('')}
       <li class="page-item ${currentIndex === slides.length - 1 ? 'disabled' : ''}">
-        <a ${currentIndex < slides.length - 1 ? `href="#${slides[currentIndex + 1]}"` : ''} class="page-link" aria-label="Suivante"></a>
+        <a ${currentIndex < slides.length - 1 ? `href="#${slides[currentIndex + 1]}"` : ''} class="page-link" aria-label="Next"></a>
       </li>
     `;
   });
