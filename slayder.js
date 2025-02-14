@@ -23,7 +23,7 @@ document.querySelector("#summary ul.dropdown-menu").innerHTML = [...document.que
 
     document.querySelector("#pagination ul.pagination").innerHTML = `
       <li class="page-item ${currentIndex === 0 ? 'disabled' : ''}">
-        <a href="${currentIndex > 0 ? `#${slides[currentIndex - 1]}` : ''}" class="page-link" aria-label="Previous"></a>
+        <a ${currentIndex > 0 ? `href="#${slides[currentIndex - 1]}"` : ''} class="page-link" aria-label="Précédente"></a>
       </li>
       ${slides.map((slide, index) => `
         <li class="page-item ${currentIndex === index ? 'active' : ''}" ${currentIndex === index ? 'aria-current="page"' : ''}>
@@ -31,7 +31,7 @@ document.querySelector("#summary ul.dropdown-menu").innerHTML = [...document.que
         </li>
       `).join('')}
       <li class="page-item ${currentIndex === slides.length - 1 ? 'disabled' : ''}">
-        <a href="${currentIndex < slides.length - 1 ? `#${slides[currentIndex + 1]}` : ''}" class="page-link" aria-label="Next"></a>
+        <a ${currentIndex < slides.length - 1 ? `href="#${slides[currentIndex + 1]}"` : ''} class="page-link" aria-label="Suivante"></a>
       </li>
     `;
   });
