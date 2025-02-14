@@ -11,7 +11,7 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll("section").forEach(section => observer.observe(section));
 
 // Summary
-document.querySelector("#summary ul.dropdown-menu").innerHTML = [...document.querySelectorAll('h1')].map(heading => `
+document.querySelector("#summary ul.dropdown-menu").innerHTML = [...document.querySelectorAll('section h1')].map(heading => `
   <li><a class="dropdown-item" href="#${heading.closest('section').id}">${heading.textContent}</a></li>
 `).join('');
 
