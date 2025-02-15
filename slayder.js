@@ -5,13 +5,14 @@ const observer = new IntersectionObserver(entries => {
     if (entry.isIntersecting) {
       location.hash = `#${entry.target.id}`;
       document.title = `${title} - ${entry.target.querySelector('h1')?.innerText || entry.target.id}`;
+      entry.target.focus();
     }
   });
 }, { threshold: 1 });
 document.querySelectorAll("section").forEach(section => observer.observe(section));
 
 // Summary
-document.querySelector("#summary ul").innerHTML = [...document.querySelectorAll('section h1')].map(heading => `
+document.querySelector("#summary ul").innerHTML = [...document.querySelectorAll('section h2')].map(heading => `
   <li><a class="dropdown-item" href="#${heading.closest('section').id}">${heading.textContent}</a></li>
 `).join('');
 

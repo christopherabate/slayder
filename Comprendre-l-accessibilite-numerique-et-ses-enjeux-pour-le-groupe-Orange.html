@@ -18,7 +18,7 @@
           <button class="btn btn-dropdown dropdown-toggle" data-bs-toggle="dropdown" type="button" aria-expanded="false">Sommaire</button>
           <ul class="dropdown-menu"></ul>
         </div>
-        <div class="dropdown d-none d-sm-block">
+        <div class="dropdown d-none d-md-block">
           <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
             <symbol id="ui-auto-mode" viewBox="0 0 1000 1000">
               <path d="M500 75C265.3 75 75 265.5 75 500.5S265.3 926 500 926s425-190.5 425-425.5S734.7 75 500 75m0 775V150c192.6.9 350 157.5 350 350.5S692.6 849.1 500 850"/>
@@ -55,7 +55,7 @@
             </li>
           </ul>
         </div>
-        <div class="d-none d-sm-block">
+        <div class="d-none d-md-block">
           <button id="fullscreen" class="btn btn-icon" type="button" aria-label="Plein écran">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" fill="currentColor" class="solaris-icon si-full-screen" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
               <path d="M125,125V375h75V200H375V125H125Zm675,0H625v75H800V375h75V125H800Zm0,675H625v75H875V625H800V800ZM200,625H125V875H375V800H200V625Z" style="fill-rule:evenodd"/>
@@ -64,24 +64,24 @@
         </div>
       </nav>
     </header>
-    <main role="main" data-bs-spy="scroll" data-bs-target="#summary">
-      <section id="intro" class="d-flex align-items-center">
+    <main role="main" data-bs-spy="scroll" data-bs-target="#summary" tabindex="0">
+      <section tabindex="0" id="intro" class="d-flex align-items-center">
         <div>
           <img src="orange-logo.svg" width="100" height="100" alt="Orange" loading="lazy" class="mb-3">
-          <h1 class="display-1">Introduction</h1>
+          <h2 class="display-1">Introduction</h2>
           <p>Orange / INNOV / IT-S<br />
           Centre d'Expertise Accessibilité Numérique<br />
           <a href="mailto:accessibility.support@orange.com">accessibility.support@orange.com</a></p>
-          <h2>
+          <p class="display-4">
             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="solaris-icon si-clock-white align-bottom" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false">
               <path d="M597.517,590.517 C590.484346,597.549917 580.945861,601.500991 571,601.500991 C561.054139,601.500991 551.515654,597.549917 544.483,590.517 L397.983,444.017 C397.962,443.995 397.943,443.973 397.922,443.952 C397.506667,443.534667 397.101667,443.108667 396.707,442.674 C396.507,442.449 396.312,442.218 396.114,441.99 C395.916,441.762 395.707,441.526 395.514,441.29 C395.275,440.998 395.048,440.7 394.814,440.404 C394.673,440.221 394.528,440.042 394.39,439.856 C394.147,439.529 393.916,439.197 393.685,438.864 C393.57,438.699 393.452,438.536 393.339,438.364 C393.109,438.022 392.892,437.675 392.674,437.327 C392.568,437.158 392.46,436.99 392.357,436.819 C392.151,436.478 391.957,436.133 391.763,435.786 C391.656,435.596 391.547,435.407 391.444,435.215 C391.27,434.889 391.104,434.56 390.944,434.23 C390.832,434.006 390.718,433.783 390.61,433.556 C390.468,433.256 390.333,432.95 390.199,432.645 C390.083,432.382 389.965,432.119 389.855,431.853 C389.745,431.587 389.637,431.308 389.532,431.034 C389.413,430.728 389.295,430.422 389.184,430.112 C389.099,429.873 389.02,429.632 388.94,429.392 C388.824,429.044 388.709,428.697 388.603,428.346 C388.539,428.133 388.481,427.919 388.421,427.706 C388.314,427.328 388.209,426.951 388.114,426.569 C388.065,426.369 388.022,426.169 387.975,425.969 C387.884,425.575 387.794,425.181 387.716,424.782 C387.675,424.582 387.643,424.373 387.606,424.169 C387.536,423.776 387.465,423.384 387.406,422.988 C387.371,422.751 387.346,422.514 387.316,422.277 C387.269,421.912 387.216,421.548 387.184,421.177 C387.153,420.863 387.135,420.548 387.112,420.234 C387.091,419.934 387.064,419.647 387.049,419.351 C387.019,418.733 387.002,418.115 387.002,417.497 L387.002,142.497 C387.002,121.786322 403.791322,104.997 424.502,104.997 C445.212678,104.997 462.002,121.786322 462.002,142.497 L462.002,401.967 L597.517,537.483 C604.549917,544.515654 608.500991,554.054139 608.500991,564 C608.500991,573.945861 604.549917,583.484346 597.517,590.517 L597.517,590.517 Z M425,0 C659.721,0 850,190.279 850,425 C850,659.721 659.721,850 425,850 C190.279,850 0,659.721 0,425 C0,190.279 190.279,0 425,0 Z M425,75 C231.7,75 75,231.7 75,425 C75,618.3 231.7,775 425,775 C618.3,775 775,618.3 775,425 C775,231.7 618.3,75 425,75 Z" transform="translate(75 75)"/>
             </svg>
             1h00
-          </h2>
+          </p>
         </div>
       </section>
-      <section id="schedule">
-        <h1>Objectifs</h1>
+      <section tabindex="0" id="schedule">
+        <h2>Objectifs</h2>
         <ol>
           <li>Comprendre le terme <mark>accessibilité</mark></li>
           <li>Reconnaitre les <mark>situations de handicap</mark></li>
@@ -90,8 +90,8 @@
           <li>Vous donner des <mark>contacts</mark> et des <mark>liens utiles</mark> pour en savoir plus</li>
         </ol>
       </section>
-      <section id="figures">
-        <h1>Quelques chiffres</h1>
+      <section tabindex="0" id="figures">
+        <h2>Quelques chiffres</h2>
         <div class="row">
           <div class="col-6">
             <p>Classe de masquage accessible :</p>
@@ -113,44 +113,78 @@
           </div>
         </div>
       </section>
-      <section id="assistive-technologies">
-        <h1>Les aides techniques</h1>
+      <section tabindex="0" id="assistive-technologies">
+        <h2>Les aides techniques</h2>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/0ani4NkrRe4?si=WtPvT6e8Q6RF0WXf&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </section>
-      <section id="legals">
-        <h1>Obligations légales</h1>
+      <section tabindex="0" id="legals">
+        <h2>Obligations légales</h2>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
+        <h3>Obligations légales</h3>
       </section>
-      <section id="orange-commitments">
-        <h1>Les engagements Orange</h1>
+      <section tabindex="0" id="orange-commitments">
+        <h2>Les engagements Orange</h2>
       </section>
-      <section id="go-further">
-        <h1>Pour aller plus loin…</h1>
+      <section tabindex="0" id="go-further">
+        <h2>Pour aller plus loin…</h2>
       </section>
-      <section id="conclusion">
-        <h1>En conclusion…</h1>
+      <section tabindex="0" id="conclusion">
+        <h2>En conclusion…</h2>
       </section>
-      <section id="thanks" class="d-flex align-items-center">
+      <section tabindex="0" id="thanks" class="d-flex align-items-center">
         <div>
           <img src="orange-logo.svg" width="100" height="100" alt="Orange" loading="lazy" class="mb-3">
-          <h1 class="display-1">Merci !</h1>
+          <h2 class="display-1">Merci !</h2>
           <p class="lead">Pour toute demande de support : <a href="mailto:accessibility.support@orange.com">ZZZ ACCESSIBILITY SUPPORT</a> (accessibility.support@orange.com)</p>
         </div>
       </section>
       <!-- SLIDE DE TITRE
-      <section id="IDENTIFIANT_UNIQUE" class="d-flex align-items-center">
+      <section tabindex="0" id="IDENTIFIANT_UNIQUE" class="d-flex align-items-center">
         <div>
-          <h1 class="display-1">TITRE</h1>
+          <h2 class="display-1">TITRE</h2>
         </div>
       </section>
       -->
       <!-- SLIDE 1 COLONNE
-      <section id="IDENTIFIANT_UNIQUE">
-        <h1>TITRE</h1>
+      <section tabindex="0" id="IDENTIFIANT_UNIQUE">
+        <h2>TITRE</h2>
       </section>
       -->
       <!-- SLIDE 2 COLONNES
-      <section id="IDENTIFIANT_UNIQUE">
-        <h1>TITRE</h1>
+      <section tabindex="0" id="IDENTIFIANT_UNIQUE">
+        <h2>TITRE</h2>
         <div class="row">
           <div class="col-6">
           </div>
@@ -161,7 +195,7 @@
       -->
     </main>
     <footer>
-      <nav id="pagination" aria-label="Pagination" class="d-none d-sm-block">
+      <nav id="pagination" aria-label="Pagination" class="d-none d-md-block">
         <ul class="pagination justify-content-center"></ul>
       </nav>
     </footer>
