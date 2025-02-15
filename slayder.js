@@ -7,7 +7,7 @@ const observer = new IntersectionObserver(entries => {
       document.title = `${title} - ${entry.target.querySelector('h1')?.innerText || entry.target.id}`;
     }
   });
-}, { threshold: 0.5 });
+}, { threshold: 1 });
 document.querySelectorAll("section").forEach(section => observer.observe(section));
 
 // Summary
