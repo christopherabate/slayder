@@ -1,1 +1,1 @@
-https://christopherabate.github.io/slayder/template.html
+https://christopherabate.github.io/slayder/Rédiger-accessible.html
