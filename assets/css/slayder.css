@@ -47,6 +47,10 @@ footer {
   padding: 1em 2em;
 }
 
+.dropdown .active svg {
+  display: block !important;
+}
+
 body:fullscreen {
   zoom: 200%;
 }
