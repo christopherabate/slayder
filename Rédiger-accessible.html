@@ -20,6 +20,9 @@
         </div>
         <div class="dropdown d-none d-md-block">
           <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+            <symbol id="check" viewBox="0 0 1000 1000">
+              <path d="M729.667 250 396.333 583.333l-125-125L188 541.667l125 125L396.333 750l83.334-83.333L813 333.333z"/>
+            </symbol>
             <symbol id="ui-auto-mode" viewBox="0 0 1000 1000">
               <path d="M500 75C265.3 75 75 265.5 75 500.5S265.3 926 500 926s425-190.5 425-425.5S734.7 75 500 75m0 775V150c192.6.9 350 157.5 350 350.5S692.6 849.1 500 850"/>
             </symbol>
@@ -39,18 +42,21 @@
               <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
                 <svg class="me-2" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#ui-light-mode"></use></svg>
                 Clair
+                <svg class="ms-auto d-none"><use href="#check"></use></svg>
               </button>
             </li>
             <li>
               <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
                 <svg class="me-2" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><use href="#ui-dark-mode"></use></svg>
                 Sombre
+                <svg class="ms-auto d-none"><use href="#check"></use></svg>
               </button>
             </li>
             <li>
               <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
                 <svg class="me-2" width="1em" height="1em" fill="currentColor"><use href="#ui-auto-mode"></use></svg>
                 Auto
+                <svg class="ms-auto d-none"><use href="#check"></use></svg>
               </button>
             </li>
           </ul>
