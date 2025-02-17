@@ -37,7 +37,7 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll('section').forEach(section => observer.observe(section));
 
 // Summary
-document.querySelector('#summary .dropdown-menu').innerHTML = [...document.querySelectorAll('section h1, section h2')].map(heading => `
+document.querySelector('#summary .dropdown-menu').innerHTML = [...document.querySelectorAll('section h1')].map(heading => `
   <li><a class="dropdown-item d-flex align-items-center" href="#${heading.closest('section').id}">${heading.textContent}<svg class="ms-auto d-none" width="1em" height="1em" fill="currentColor"><use href="#check"></use></svg></a></li>
 `).join('');
 
