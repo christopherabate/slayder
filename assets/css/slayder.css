@@ -50,6 +50,14 @@ section:focus {
   border-color: var(--bs-form-invalid-border-color);
 }
 
+.quiz.validated input.valid ~.badge.text-bg-success {
+  display: inline-block !important;
+}
+
+.quiz.validated input.invalid ~.badge.text-bg-danger {
+  display: inline-block !important;
+}
+
 header,
 footer {
   padding: 1em 2em;

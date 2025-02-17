@@ -97,6 +97,7 @@
       event.preventDefault();
       event.stopPropagation();
       form.classList.add('validated');
+      form.querySelector("button[type='submit']").disabled = true;
     }, false);
   });
 
