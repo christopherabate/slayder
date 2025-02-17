@@ -126,6 +126,63 @@
           <li>Permettre aux destinataires du document d’avoir un <strong class="text-primary">aperçu rapide de la structure</strong></li>
         </ul>
       </section>
+      <section tabindex="0" id="quiz" class="d-flex align-items-center">
+        <div>
+          <h1 class="display-1">Quiz</h1>
+          <img alt="" src="assets/images/devices.svg" loading="lazy" class="h-50 img-fluid position-absolute bottom-0 start-50 translate-middle-x">
+        </div>
+      </section>
+      <section tabindex="0" id="quiz-1">
+        <h2 class="display-1">Évaluation des connaissances</h2>
+        <form class="quiz" novalidate>
+          <fieldset>
+            <legend>Question 1</legend>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" data-valid="true">
+                Réponse 1
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox">
+                Réponse 2
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" data-valid="true">
+                Réponse 3
+              </label>
+            </div>
+          </fieldset>
+          <button class="btn btn-primary" type="submit">Vérifier</button>
+        </form>
+        <form class="quiz" novalidate>
+          <fieldset>
+            <legend>Question 2</legend>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="q2" data-valid="true">
+                Réponse 1
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="q2">
+                Réponse 2
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="radio" name="q2">
+                Réponse 3
+              </label>
+            </div>
+          </fieldset>
+          <button class="btn btn-primary" type="submit">Vérifier</button>
+        </form>
+      </section>
       <section tabindex="0" id="templates" class="d-flex align-items-center">
         <div>
           <h1 class="display-1">Templates</h1>
@@ -252,11 +309,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
     <script src="assets/js/colorModeToggler.js"></script>
     <script src="assets/js/slayder.js"></script>
-    <script>
-      const popoverList = [...document.querySelectorAll('[data-bs-toggle="popover"]')].map(popoverTriggerEl => new boosted.Popover(popoverTriggerEl))
-    </script>
   </body>
 </html>

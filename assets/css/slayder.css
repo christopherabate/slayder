@@ -11,16 +11,9 @@ main {
   flex-grow: 1;
   overflow-x: auto;
   overflow-y: none;
-  scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
   display: flex;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  main {
-    scroll-behavior: auto;
-  }
 }
 
 section {
@@ -47,6 +40,14 @@ section li {
 
 section:focus {
   outline:0;
+}
+
+.quiz.validated input.valid {
+  border-color: var(--bs-form-valid-border-color);
+}
+
+.quiz.validated input.invalid {
+  border-color: var(--bs-form-invalid-border-color);
 }
 
 header,
