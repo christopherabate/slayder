@@ -21,7 +21,7 @@ const observer = new IntersectionObserver(entries => {
     if (entry.isIntersecting) {
       location.hash = `#${entry.target.id}`;
 
-      let main_title = document.querySelector('h1');
+      let main_title = document.querySelector('#cover h1');
       let section_title = entry.target.querySelector('h1') ? null : (function() {
         for (let section = entry.target.previousElementSibling; section; section = section.previousElementSibling) {
           if (section.querySelector('h1')) return section.querySelector('h1');
