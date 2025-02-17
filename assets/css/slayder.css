@@ -50,11 +50,7 @@ section:focus {
   border-color: var(--bs-form-invalid-border-color);
 }
 
-.quiz.validated input.valid ~.badge.text-bg-success {
-  display: inline-block !important;
-}
-
-.quiz.validated input.invalid ~.badge.text-bg-danger {
+.quiz.validated .badge {
   display: inline-block !important;
 }
 

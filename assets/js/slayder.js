@@ -82,14 +82,10 @@
   document.querySelectorAll('.quiz').forEach(form => {
     form.addEventListener('submit', event => {
       const validateInput = () => {
-        let hasInvalidInput = false;
         form.querySelectorAll('input').forEach(input => {
-          input.classList.toggle('valid', input.checked === input.hasAttribute("data-valid"));
-          input.classList.toggle('invalid', input.checked !== input.hasAttribute("data-valid"));
-          if (input.checked !== input.hasAttribute("data-valid")) hasInvalidInput = true;
+          input.classList.toggle('valid', input.checked === !!input.parentElement.querySelector(".badge"));
+          input.classList.toggle('invalid', input.checked !== !!input.parentElement.querySelector(".badge"));
         });
-        form.classList.toggle('invalid', hasInvalidInput);
-        form.classList.toggle('valid', !hasInvalidInput);
       };
 
       validateInput();
