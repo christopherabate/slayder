@@ -40,7 +40,7 @@
 
         // Summary buils
         document.querySelector('#summary .dropdown-menu').innerHTML = [...document.querySelectorAll('section h1')].map(heading => `
-          <li ${heading === (section_title || entry.target.querySelector('h1')) ? 'class="active"' : ''}><a class="dropdown-item d-flex align-items-center" href="#${heading.closest('section').id}">${heading.textContent}<svg class="ms-auto d-none" width="1em" height="1em" fill="currentColor"><use href="#check"></use></svg></a></li>
+          <li ${heading === (section_title || entry.target.querySelector('h1')) ? 'class="active"' : ''}><a class="dropdown-item d-flex align-items-center" href="#${heading.closest('section').id}">${heading.textContent}<svg class="ms-auto d-none" width="1em" height="1em"><use xlink:href="assets/images/slayder-sprites.svg#check"></use></svg></a></li>
         `).join('');
 
         // Pagination buid
