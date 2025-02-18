@@ -24,22 +24,12 @@ section {
   scroll-snap-stop: always;
   width: 100%;
   height: 100%;
-  padding: 1em 2em;
-}
-
-section.title {
-  background-image: url('../images/devices.svg');
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: 40%;
+  padding: 1rem 2rem;
 }
 
 section li {
-  margin-bottom: 1em;
-}
-
-section:focus {
-  outline:0;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .quiz.validated input.valid {
@@ -56,7 +46,7 @@ section:focus {
 
 header,
 footer {
-  padding: 1em 2em;
+  padding: 1rem 2rem;
 }
 
 .dropdown .active svg {
