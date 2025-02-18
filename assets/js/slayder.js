@@ -77,10 +77,10 @@
             if (location.hash !== `#${entry.target.id}`) history.replaceState(null, "", `#${entry.target.id}`);
 
             // Change H1
-            document.querySelector('h1').innerText = entry.target === main_title ? i18n('training') : (section_title ? section_title.innerText : main_title.innerText);
+            document.querySelector('h1').innerText = entry.target === document.querySelector('section') ? i18n('training') : (section_title ? section_title.innerText : main_title.innerText);
 
             // Change title
-            document.title = `${section_title ? `${main_title.innerText} - ${section_title.innerText}` : (entry.target === main_title) ? i18n('training') : main_title.innerText} - ${entry.target.querySelector('h1, h2, h3, h4, h5, h6')?.innerText || entry.target.id}`;
+            document.title = `${section_title ? `${main_title.innerText} - ${section_title.innerText}` : (entry.target === document.querySelector('section')) ? i18n('training') : main_title.innerText} - ${entry.target.querySelector('h1, h2, h3, h4, h5, h6')?.innerText || entry.target.id}`;
 
             // Summary buils
             document.querySelector('#summary .dropdown-menu').innerHTML = [...document.querySelectorAll('section h1')].map(heading => `
@@ -138,9 +138,6 @@
           form.querySelector("button[type='submit']").disabled = true;
         }, false);
       });
-
-      // Highlight code
-      hljs.highlightAll();
     })
     .catch(error => { console.log(error) });
 })()
