@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Titre du document</title>
+    <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/orange-helvetica.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet">
+    <link href="assets/css/slayder.css" rel="stylesheet">
+    <link rel="preload" href="/assets/images/slayder-sprites.svg" as="image" type="image/svg+xml">
+  </head>
+  <body>
+    <header role="banner" class="d-flex justify-content-between">
+      <h1 aria-current="location">Formation</h1>
+      <nav class="btn-group" role="navigation" aria-label="Navigation générale">
+        <div id="summary" class="dropdown">
+          <button class="btn btn-dropdown dropdown-toggle" data-bs-toggle="dropdown" type="button" aria-expanded="false">Sommaire</button>
+          <ul class="dropdown-menu"></ul>
+        </div>
+        <div class="dropdown d-none d-md-block">
+          <button class="btn btn-dropdown dropdown-toggle" id="bd-theme" data-bs-toggle="dropdown" type="button" aria-expanded="false">
+            <svg class="theme-icon-active" width="1.25em" height="1.25em" aria-hidden="true" focusable="false"><use xlink:href="assets/images/slayder-sprites.svg#ui-auto-mode"></use></svg>
+            <span class="d-lg-none ms-2" id="bd-theme-text">Mode</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                <svg class="me-2" width="1em" height="1em" aria-hidden="true" focusable="false"><use xlink:href="assets/images/slayder-sprites.svg#ui-light-mode"></use></svg>
+                Clair
+                <svg class="ms-auto d-none" width="1em" height="1em"><use xlink:href="assets/images/slayder-sprites.svg#check"></use></svg>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                <svg class="me-2" width="1em" height="1em" aria-hidden="true" focusable="false"><use xlink:href="assets/images/slayder-sprites.svg#ui-dark-mode"></use></svg>
+                Sombre
+                <svg class="ms-auto d-none" width="1em" height="1em"><use xlink:href="assets/images/slayder-sprites.svg#check"></use></svg>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                <svg class="me-2" width="1em" height="1em"><use xlink:href="assets/images/slayder-sprites.svg#ui-auto-mode"></use></svg>
+                Auto
+                <svg class="ms-auto d-none" width="1em" height="1em"><use xlink:href="assets/images/slayder-sprites.svg#check"></use></svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="d-none d-md-block">
+          <button id="fullscreen" class="btn btn-icon" type="button" aria-label="Plein écran">
+            <svg width="1.25em" height="1.25em" aria-hidden="true" focusable="false"><use xlink:href="assets/images/slayder-sprites.svg#full-screen"></use></svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main role="main" id="content"></main>
+    <footer>
+      <nav id="pagination" aria-label="Pagination" class="d-none d-md-block">
+        <ul class="pagination justify-content-center"></ul>
+      </nav>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="assets/js/colorModeToggler.js"></script>
+  </body>
+</html>
