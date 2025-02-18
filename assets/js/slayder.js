@@ -66,7 +66,7 @@
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            let main_title = document.querySelector('#cover h1');
+            let main_title = document.querySelector('section h1');
             let section_title = entry.target.querySelector('h1') ? null : (function () {
               for (let section = entry.target.previousElementSibling; section; section = section.previousElementSibling) {
                 if (section.querySelector('h1')) return section.querySelector('h1');
@@ -77,10 +77,10 @@
             if (location.hash !== `#${entry.target.id}`) history.replaceState(null, "", `#${entry.target.id}`);
 
             // Change H1
-            document.querySelector('h1').innerText = entry.target.id === "cover" ? i18n('training') : (section_title ? section_title.innerText : main_title.innerText);
+            document.querySelector('h1').innerText = entry.target === main_title ? i18n('training') : (section_title ? section_title.innerText : main_title.innerText);
 
             // Change title
-            document.title = `${section_title ? `${main_title.innerText} - ${section_title.innerText}` : (entry.target.id === "cover") ? i18n('training') : main_title.innerText} - ${entry.target.querySelector('h1, h2, h3, h4, h5, h6')?.innerText || entry.target.id}`;
+            document.title = `${section_title ? `${main_title.innerText} - ${section_title.innerText}` : (entry.target === main_title) ? i18n('training') : main_title.innerText} - ${entry.target.querySelector('h1, h2, h3, h4, h5, h6')?.innerText || entry.target.id}`;
 
             // Summary buils
             document.querySelector('#summary .dropdown-menu').innerHTML = [...document.querySelectorAll('section h1')].map(heading => `

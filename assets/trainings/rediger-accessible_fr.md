@@ -1,4 +1,4 @@
-::: cover X
+::: couverture X
 
 <img src="assets/images/orange-logo.svg" width="100" height="100" alt="Orange" loading="lazy" class="mb-3">
 <img src="assets/images/a11y.svg" width="100" height="100" alt="" loading="lazy" class="mb-3">
@@ -25,7 +25,7 @@ Centre d'Expertise Accessibilité Numérique
 - Identifier les **obstacles** à éviter
 - Tester et améliorer l’**accessibilité des contenus**
 
-::: thanks X
+::: merci X
 
 <img src="assets/images/orange-logo.svg" width="100" height="100" alt="Orange" loading="lazy" class="mb-3">
 
