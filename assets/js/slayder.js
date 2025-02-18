@@ -48,7 +48,7 @@
         const currentIndex = slides.indexOf(entry.target.id);
         document.querySelector('#pagination .pagination').innerHTML = `
           <li class="page-item ${currentIndex === 0 ? 'disabled' : ''}">
-            <a ${currentIndex > 0 ? `href="#${slides[currentIndex - 1]}"` : ''} class="page-link" aria-label="${i18n('previous')}"></a>
+            <a ${currentIndex > 0 ? `href="#${slides[currentIndex - 1]}"` : ''} class="page-link">${i18n('previous')}</a>
           </li>
           ${slides.map((slide, index) => `
             <li class="page-item ${currentIndex === index ? 'active' : ''}" ${currentIndex === index ? 'aria-current="page"' : ''}>
@@ -56,7 +56,7 @@
             </li>
           `).join('')}
           <li class="page-item ${currentIndex === slides.length - 1 ? 'disabled' : ''}">
-            <a ${currentIndex < slides.length - 1 ? `href="#${slides[currentIndex + 1]}"` : ''} class="page-link" aria-label="${i18n('next')}"></a>
+            <a ${currentIndex < slides.length - 1 ? `href="#${slides[currentIndex + 1]}"` : ''} class="page-link">${i18n('next')}</a>
           </li>
         `;
       }
